@@ -10,3 +10,19 @@
 	border-bottom: 1px solid #5f5f5f;
 }
 
+.about{
+	width: 70%;
+	margin: 0px auto;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+.about-title{
+	padding-bottom: 5px;
+}
+
+.about-content{
+	text-align: justify;
+	padding: 5px;
+}
+

@@ -1,15 +1,32 @@
 import { Component, OnInit } from '@angular/core';
+import { Project } from '../../models/proyect';
+import { ProjectService } from '../../services/project.service';
+
+
 
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css']
+  styleUrls: ['./create.component.css'],
+  providers: [ProjectService]
 })
 export class CreateComponent implements OnInit {
 
-  constructor() { }
+	public title: string;
+  	public project: Project;
+  
+  constructor( private _projectService : ProjectService) { 
+  		this.title = "Crear Proyecto";
+  		this.project = new Project('','','','','',2019,'');
+  }
 
   ngOnInit() {
+  
+  }
+  
+  enviar(form){
+  	console.log(this.project);
   }
 
 }
+
